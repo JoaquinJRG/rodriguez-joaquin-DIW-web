@@ -1,0 +1,100 @@
+/*Import fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+/*Variables*/
+:root{
+    /*Colores*/
+    --blanco: #FFFFFF;
+    --gris:  #ECE9EA;
+    --azul-muy-oscuro: #0E235D;
+    --azul-oscuro: #024FFF;
+    --azul: #47A9FF;
+    --azul-claro: #AEDBFF;
+    --azul-muy-claro: #D6EBFF;
+
+    --radio: 15px; 
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Header*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 1px lightgray;
+    border-radius: 0px 0px 15px 15px;
+    padding: 7px 0px;
+    height: 8vh;
+    width: 100%;
+    position: sticky;
+}
+
+header img{
+    border: solid 1px black;
+    height: 90%;
+    width: auto;
+}
+
+header nav{ 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+header nav a{
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--azul-muy-oscuro);
+}
+
+#pedir-cita-btn{
+    user-select: none;
+    border-radius: 17px; 
+    padding: 7px 12px;
+    font-weight: 500;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(2,79,255,1) 30%, rgba(71,169,255,1) 100%);
+    color: var(--blanco);
+}
+
+/*Main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Inicio*/
+#inicio{
+    display: flex;
+    flex-direction: row;
+    height: 92vh;
+    width: 100%;
+    border: solid 1px red;
+}
+
+#inicio-izquierda{
+    width: 50%;
+    border: solid 1px red;
+}
+
+#inicio-derecha{
+    width: 50%;
+    border: solid 1px red;
+}
+
