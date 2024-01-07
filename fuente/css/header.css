@@ -38,9 +38,12 @@ header{
     height: 8vh;
     width: 100%;
     position: sticky;
+
+    user-select: none;
 }
 
 header img{
+    pointer-events: none;
     height: 100%;
     width: auto;
 }

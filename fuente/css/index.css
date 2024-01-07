@@ -32,6 +32,7 @@ main{
 }
 
 #izq-titulo img{
+    pointer-events: none;
     height: 90%;
     width: auto;
 }
@@ -79,8 +80,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
     width: 50%;
+    padding-left: 25px;
     border-radius: 15px;
     background-color: var(--gris);
 
@@ -88,6 +90,16 @@ main{
     -webkit-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.38);
     -moz-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.38);
     box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.38);
+}
+
+.datos{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.datos img {
+    pointer-events: none;
 }
 
 #izq-cita{
@@ -146,4 +158,6 @@ main{
 #der-caja img{
     height: 110%;
     width: auto;
+    pointer-events: none;
+    user-select: none;
 }
