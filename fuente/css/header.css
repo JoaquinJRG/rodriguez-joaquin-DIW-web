@@ -1,0 +1,73 @@
+/*Variables*/
+:root{
+    /*Colores*/
+    --blanco: #FFFFFF;
+    --gris:  #ECE9EA;
+    --azul-muy-oscuro: #0E235D;
+    --azul-oscuro: #024FFF;
+    --azul: #47A9FF;
+    --azul-claro: #AEDBFF;
+    --azul-muy-claro: #D6EBFF;
+
+    --radio: 15px; 
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Header*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 1px lightgray;
+    border-radius: 0px 0px 15px 15px;
+    padding: 7px 0px;
+    height: 8vh;
+    width: 100%;
+    position: sticky;
+}
+
+header img{
+    height: 100%;
+    width: auto;
+}
+
+/*Nav*/
+header nav{ 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+header nav a{
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--azul-muy-oscuro);
+}
+
+/* Botón pedir cita */
+#pedir-cita-btn{
+    user-select: none;
+    border-radius: 17px; 
+    padding: 8px 12px;
+    font-weight: 500;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(2,79,255,1) 30%, rgba(71,169,255,1) 100%);
+    color: var(--blanco);
+}
+
+
+
