@@ -84,6 +84,12 @@ header {
             text-decoration: none;
             color: $color-texto;
             transition: all ease 0.3s;
+
+            &:hover {
+                color: $color-destacado;
+                border: solid 1px $color-destacado;
+                background-color: rgba(2, 79, 255, 0.1);
+            }
         }
     }
 

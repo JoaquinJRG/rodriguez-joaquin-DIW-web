@@ -20,19 +20,6 @@ header {
 
 #menu-section {
     display: none;
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &.open {
-        position: fixed;
-        z-index: 1;
-        display: block;
-    }
 }
 
 
@@ -58,4 +45,21 @@ header {
             }
         }
     }
+
+    #menu-section {
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &.open {
+            position: fixed;
+            z-index: 1;
+            display: block;
+        }
+    }
+
 }
