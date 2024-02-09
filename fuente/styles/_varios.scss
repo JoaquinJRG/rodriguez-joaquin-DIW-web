@@ -1,19 +1,19 @@
-//Body
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+//Mixins
+
+//Body 
+body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    color: $color-texto;
 }
 
 //Header
 header {
     border-radius: 0px 0px 15px 15px;
     padding: 7px 0px;
-    height: 50px;
-    width: 100%;
     border: 1px solid $color-secundario;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
 
     #logo {
         width: auto;
@@ -25,7 +25,7 @@ header {
             width: auto;
         }
     }
-    
+
 
     nav {
         user-select: none;
@@ -65,7 +65,10 @@ header {
 }
 
 #menu-section {
-    
+
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+
     &.open {
         border: 1px solid rgba(209, 213, 219, 0.3);
         border-radius: 0px 0px 15px 15px;
@@ -93,4 +96,88 @@ header {
         }
     }
 
+}
+
+
+//Inicio
+
+#inicio {
+
+    #inicio-titulo {
+
+        padding: 10px;
+
+        img {
+            pointer-events: none;
+        }
+
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: $font-size-xxl;
+            background: linear-gradient(90deg, $color-destacado, $color-fondo2);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    #inicio-horario {
+        padding: 10px;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        border-radius: $border-radius;
+        background-color: $color-secundario;
+        font-size: $font-size-base;
+    }
+
+    #inicio-datos {
+        padding: 10px;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        border-radius: $border-radius;
+        background-color: $color-secundario;
+        font-size: $font-size-sm;
+
+    }
+
+    #inicio-cita {
+        padding: 10px;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        border-radius: $border-radius;
+        
+        background: linear-gradient(90deg, $color-destacado 30%, $color-fondo2 100%);
+        color: $color-fondo;
+
+        p {
+            font-size: $font-size-md;
+        }
+
+        a {
+            user-select: none;
+            border-radius: 17px;
+            padding: 10px;
+            font-weight: 500;
+            text-decoration: none;
+            background-color: $color-fondo;
+            color: $color-destacado;
+            transition: all ease 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    #inicio-img {
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        border-radius: $border-radius;
+        background-color: $color-secundario;
+
+        div {
+            overflow: hidden;
+
+            img {
+                pointer-events: none;
+                user-select: none;
+            }
+        }
+    }
 }

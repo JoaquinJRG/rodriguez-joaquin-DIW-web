@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//Main
+main {
+    padding-top: 60px;
+    margin: 0px 120px;
+}
+
+#inicio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    height: 90vh;
+
+    #inicio-titulo {
+        grid-area: 1 / 1 / 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+            width: 25%;
+        }
+    }
+    
+    #inicio-horario {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #inicio-datos {
+        grid-area: 2 / 2 / 3 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+    
+    #inicio-cita {
+        grid-area: 3 / 1 / 4 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #inicio-img {
+        grid-area: 1 / 3 / 4 / 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+
+    main {
+        margin: 0px 10px;
+    }
+
+    #inicio{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+
+        #inicio-titulo {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+    
+        #inicio-horario {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+    
+        #inicio-datos {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    
+        #inicio-cita {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+    
+        #inicio-img {
+            grid-area: 5 / 1 / 6 / 2;
+        }
+    }
+}
