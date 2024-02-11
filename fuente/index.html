@@ -9,12 +9,14 @@
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="js/header.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/swiper.js" type="module" defer></script>
     <title>Clínica Veterinaria</title>
 </head>
 
@@ -84,6 +86,76 @@
                     <img src="assets/img/principal.png" alt="">
                 </div>
             </section>
+        </article>
+
+         <!--Comentarios-->
+         <article id="comentarios">
+            <h2>Comentarios</h2>
+            <p>Conoce los comentarios de nuestros clientes.</p>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="assets/img/gato.jpg" alt="">
+                            <h4>Francisco López</h4>
+                        </div>
+                        <div>
+                            <p>
+                                Hace unos años llevo a mi perro, son muy profesionales y me
+                                encanta el trato que nos dan, aparte del precio asequible y competitivo que tienen. Lo
+                                recomiendo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="assets/img/img-coment.jpg" alt="">
+                            <h4>Sofía Reina</h4>
+                        </div>
+                        <div>
+                            <p>
+                                Estoy muy contenta con el equipo de la clínica. Son un equipo muy
+                                profesional, el personal muy humano y cariñosos con los perritos.
+                                Te lo explican todo muy bien.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="assets/img/img-coment3.jpg" alt="">
+                            <h4>Carla Muñoz</h4>
+                        </div>
+                        <div>
+                            <p>
+                                Todos y cada uno de los veterinarios que me han atendido han tratado muy bien a mis
+                                gatos, se nota que les gusta su trabajo y los animales. Lo recomiendo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="assets/img/img-coment2.jpg" alt="">
+                            <h4>José Salto</h4>
+                        </div>
+                        <div>
+                            <p>
+                                Se nota que aman a los animales y quieren lo mejor para ellos.
+                                Todo el equipo es un encanto, siempre están ahí con una gran sonrisa y atendiendo a
+                                todas tus dudas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
         </article>
 
         <!--Preguntas-->
