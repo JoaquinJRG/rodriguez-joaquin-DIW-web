@@ -2,7 +2,6 @@
 
 //Body 
 body {
-    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     color: $color-texto;
     //scrollbar-color: blue black;
@@ -366,5 +365,56 @@ footer {
         }
     }
 
+}
+
+//Equipo 
+
+#equipo {
+    padding-top: 80px;
+
+    h1 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: $font-size-xl;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: $font-size-base;
+        text-wrap: balance;
+        margin-bottom: 5px;
+    }
+
+    section {
+        padding: 10px;
+        margin-top: 30px;
+        border-radius: $border-radius;
+        background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+
+        .card {
+            border-radius: $border-radius;
+            padding: 10px;
+            background-color: white;
+
+            img {
+                width: 190px;
+                height: auto;
+                border-radius: 15px;
+            }
+
+            div {
+                background-color: white;
+                padding: 10px;
+                border-radius: $border-radius;
+                border: solid 2px $color-destacado;
+
+                p {
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+    }
+    
 }
 
