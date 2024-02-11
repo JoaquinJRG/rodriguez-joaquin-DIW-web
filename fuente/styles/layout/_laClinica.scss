@@ -1,0 +1,33 @@
+
+#la-clinica {
+    min-height: 100vh;
+
+    #servicios {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    section:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            height: 250px;
+        }
+
+    }
+
+}
+
+
