@@ -1,0 +1,21 @@
+#preguntas {
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        details {
+            summary {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

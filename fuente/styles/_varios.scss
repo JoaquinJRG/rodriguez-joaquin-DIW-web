@@ -5,6 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     color: $color-texto;
+    //scrollbar-color: blue black;
 }
 
 //Header
@@ -32,7 +33,7 @@ header {
 
         a {
             border: solid 1px transparent;
-            border-radius: 17px;
+            border-radius: $border-radius;
             padding: 8px 12px;
             font-weight: 500;
             text-decoration: none;
@@ -49,7 +50,7 @@ header {
 
     #pedir-cita-btn {
         user-select: none;
-        border-radius: 17px;
+        border-radius: $border-radius;
         padding: 10px;
         font-weight: 500;
         text-decoration: none;
@@ -81,7 +82,7 @@ header {
 
         a {
             border: solid 1px transparent;
-            border-radius: 17px;
+            border-radius: $border-radius;
             padding: 8px 12px;
             font-weight: 500;
             text-decoration: none;
@@ -151,7 +152,7 @@ header {
 
         a {
             user-select: none;
-            border-radius: 17px;
+            border-radius: $border-radius;
             padding: 10px;
             font-weight: 500;
             text-decoration: none;
@@ -182,8 +183,85 @@ header {
     }
 }
 
+//Comentarios 
+
+
+
+//Preguntas
+#preguntas {
+    margin-top: 100px;
+
+    h2 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: $font-size-xl;
+        margin-bottom: 30px;
+    }
+
+    section {
+        padding: 30px;
+        border-radius: $border-radius;
+        background-color: $color-secundario;
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+
+        details {
+            cursor: pointer;
+            border: solid 2px $color-destacado;
+            border-radius: $border-radius;
+
+            &[open]{
+                summary {
+                    border-radius: 15px 15px 0px 0px;
+
+                    div {
+                        &::before{
+                            content: "-";
+                        }
+                    }
+                }
+            }
+
+            summary {
+                font-size: $font-size-md;
+                list-style: none;
+                background-color: white;
+                padding: 15px;
+                border-radius: $border-radius;
+
+                &:hover {
+                    div {
+                        color: white;
+                        background-color: $color-destacado;
+                    }
+                }
+
+                div {
+                    width: 30px;
+                    height: 30px;
+                    border: solid 2px $color-destacado;
+                    border-radius: 100%;
+                    color: $color-destacado;
+                    user-select: none;
+
+                    &::before {
+                        content: "+";
+                    }
+                }
+            }
+
+            p {
+                font-size: $font-size-base;
+                padding: 15px;
+                background-color: $color-fondo3;
+                border-radius: 0px 0px 15px 15px;
+            }
+        }
+    }
+}
+
 //Footer 
 footer {
+    margin-top: 100px;
     border-radius: 15px 15px 0px 0px;
     background: linear-gradient(90deg, rgba(2, 79, 255, 1) 30%, rgba(71, 169, 255, 1) 100%);
     color: $color-fondo;
