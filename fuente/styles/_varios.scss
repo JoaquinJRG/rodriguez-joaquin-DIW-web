@@ -214,7 +214,8 @@ header {
             background: white;
             border-radius: $border-radius;
             margin: 50px 5px;
-            padding: 20px 40px;
+            padding: 20px 30px;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38); 
 
             img {
                 display: block;
@@ -458,7 +459,7 @@ footer {
     }
 
     section {
-        padding: 10px;
+        padding: 30px 20px;
         margin-top: 30px;
         border-radius: $border-radius;
         background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
@@ -466,21 +467,20 @@ footer {
 
         .card {
             border-radius: $border-radius;
-            padding: 10px;
-            background-color: white;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
             img {
-                width: 190px;
-                height: auto;
+                width: auto;
+                height: 300px;
                 border-radius: 15px;
             }
 
             div {
-                background-color: white;
-                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(10px) saturate(180%);
+                padding: 15px;
                 border-radius: $border-radius;
-                border: solid 2px $color-destacado;
-
+                
                 p {
                     font-size: $font-size-sm;
                 }
@@ -564,6 +564,7 @@ footer {
             border-radius: $border-radius;
             padding: 15px;
             background-color: white;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
             img {
                 width: 150px;

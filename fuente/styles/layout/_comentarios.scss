@@ -4,3 +4,19 @@
     align-items: center;
     gap: 15px;
 }
+
+
+#comentarios {
+
+    .swiper {
+       z-index: 0;
+
+        .swiper-slide {
+           z-index: 0;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: $color-destacado;
+        } 
+    }
+}
