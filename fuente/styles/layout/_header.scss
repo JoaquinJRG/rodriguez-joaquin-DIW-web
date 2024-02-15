@@ -12,15 +12,54 @@ header {
         display: flex;
         flex-direction: row;
         gap: 20px;
+
+        @include medium() {
+            display: none;
+        }
     }
 
     #menuBtn {
         display: none;
     }
 
+    @include medium(){
+
+        #pedir-cita-btn {
+            display: none;
+        }
+
+        #menuBtn {
+            display: block;
+            cursor: pointer;
+            border-radius: 100%;
+            padding: 5px;
+            transition: all ease 0.3s;
+
+            &:hover {
+                background-color: $color-secundario;
+            }
+        }
+    }
+
 }
 
 #menu-section {
     display: none;
+
+    @include medium() {
+            nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+    
+            &.open {
+                position: fixed;
+                z-index: 1;
+                display: block;
+            }
+    }
 }
 

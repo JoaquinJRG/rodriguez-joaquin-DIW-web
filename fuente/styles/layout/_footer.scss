@@ -1,17 +1,47 @@
 footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    gap: 55px;
+    gap: 40px;
+
+    @include medium() {
+        gap: 20px;
+    }
+
+    @include small {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        hr {
+            display: none;
+        }
+
+    }
+
+    #footer-informacion {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+        @include small {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 
     #footer-siguenos {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+
+        @include small {
+            align-items: center;
+        }
 
         div {
             display: flex;
@@ -25,6 +55,10 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+
+        @include small {
+            align-items: center;
+        }
 
         div {
             display: flex;

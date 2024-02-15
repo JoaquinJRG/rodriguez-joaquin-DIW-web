@@ -2,8 +2,7 @@
 #encontrarnos {
     > section {
         display: flex;
-        align-items: center;
-        gap: 15px;
+        flex-direction: row;
     }
 }
 

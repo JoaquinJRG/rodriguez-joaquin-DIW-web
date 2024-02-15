@@ -120,6 +120,8 @@ header {
             background: linear-gradient(90deg, $color-destacado, $color-fondo2);
             background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @include large()  {font-size: $font-size-xxxl;}
         }
     }
 
@@ -129,6 +131,8 @@ header {
         border-radius: $border-radius;
         background-color: $color-secundario;
         font-size: $font-size-base;
+
+        @include large()  {font-size: $font-size-md;}
     }
 
     #inicio-datos {
@@ -137,6 +141,8 @@ header {
         border-radius: $border-radius;
         background-color: $color-secundario;
         font-size: $font-size-sm;
+
+        @include large()  {font-size: $font-size-md;}
 
     }
 
@@ -150,6 +156,8 @@ header {
 
         p {
             font-size: $font-size-md;
+
+            @include large()  {font-size: $font-size-lg;}
         }
 
         a {
@@ -195,11 +203,15 @@ header {
         font-weight: 500;
         font-size: $font-size-xl;
         margin-bottom: 10px;
+
+        @include large()  {font-size: $font-size-xxl;}
     }
 
     p {
         font-size: $font-size-base;
         margin-bottom: 30px;
+
+        @include large()  {font-size: $font-size-md;}
     }
 
     .swiper {
@@ -258,6 +270,8 @@ header {
         font-weight: 500;
         font-size: $font-size-xl;
         margin-bottom: 30px;
+
+        @include large()  {font-size: $font-size-xxl;}
     }
 
     section {
@@ -266,11 +280,17 @@ header {
         background-color: $color-secundario;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
+        @include small() {
+            padding: 0;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
         details {
             cursor: pointer;
             border: solid 2px $color-destacado;
             border-radius: $border-radius;
-
+            
             &[open] {
                 summary {
                     border-radius: 15px 15px 0px 0px;
@@ -289,6 +309,9 @@ header {
                 background-color: white;
                 padding: 15px;
                 border-radius: $border-radius;
+
+                @include small() {font-size:  $font-size-base;}
+                @include large()  {font-size: $font-size-lg;}
             
                 &:hover {
                     div {
@@ -318,10 +341,20 @@ header {
                 padding: 15px;
                 background-color: $color-fondo3;
                 border-radius: 0px 0px 15px 15px;
+                animation: open 0.6s ease-in-out;
+
+                @include small() {font-size:  $font-size-sm;}
+                @include large()  {font-size: $font-size-md;}
             }
         }
     }
 }
+  
+@keyframes open {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+  
 
 //Footer 
 footer {
@@ -360,6 +393,8 @@ footer {
         font-weight: 500;
         font-size: $font-size-xl;
         margin-bottom: 30px;
+
+        @include large()  {font-size: $font-size-xxl;}
     }
 
     form {
@@ -450,6 +485,8 @@ footer {
         font-weight: 500;
         font-size: $font-size-xl;
         margin-bottom: 30px;
+
+        @include large()  {font-size: $font-size-xxl;}
     }
 
     p {
@@ -492,7 +529,6 @@ footer {
 
 
 //La clínica
-
 #encontrarnos {
     padding-top: 80px;
 
@@ -501,20 +537,27 @@ footer {
         font-weight: 500;
         font-size: $font-size-xl;
         margin-bottom: 30px;
+
+        @include large()  {font-size: $font-size-xxl;}
+    }
+
+    img {
+        width: 200px;
     }
 
 
     #mapa {
         background-color: $color-secundario;
-        padding: 20px;
+        padding: 30px;
         border-radius: $border-radius;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        width: 100%;
 
         iframe {
             border: none; 
             border-radius: $border-radius;
-            width: 100%;
             height: 350px;
+            width: 100%;
 
             &:focus {
                 border: none;
