@@ -1,13 +1,14 @@
 *{
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    scrollbar-color: $color-destacado $color-secundario;
+    scrollbar-width: thin;
 }
 
 
 //Body 
 body {
     color: $color-texto;
-    //scrollbar-color: blue black;
 }
 
 //Header
@@ -65,10 +66,24 @@ header {
         }
     }
 
+    #menuBtn {
+        cursor: pointer;
+        border-radius: 100%;
+        padding: 5px;
+        transition: all ease 0.3s;
+        border: solid 1px transparent;
+
+        &:hover {
+            color: $color-destacado;
+            border: solid 1px $color-destacado;
+            background-color: rgba(2, 79, 255, 0.1);
+        }
+    }
+
 }
 
 #menu-section {
-
+    
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px) saturate(180%);
 
@@ -101,7 +116,6 @@ header {
 
 }
 
-
 //Inicio
 
 #inicio {
@@ -120,7 +134,7 @@ header {
             background: linear-gradient(90deg, $color-destacado, $color-fondo2);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-
+            
             @include large()  {font-size: $font-size-xxxl;}
         }
     }
@@ -237,12 +251,17 @@ header {
                 object-fit: cover;
                 background-color: $color-destacado;
                 border: solid 3px transparent;
+                @include large()  {
+                    width: 70px;
+                    height: 70px;
+                }
             }
 
             div:first-of-type {
                 margin-bottom: 20px;
                 h4 {
                     font-size: $font-size-md;
+                    @include large()  {font-size: $font-size-lg;}
                 }
             }
             
@@ -250,6 +269,8 @@ header {
             div:last-of-type p{
                 text-wrap: wrap;
                 font-size: $font-size-base;
+
+                
 
             }
         }
@@ -311,7 +332,7 @@ header {
                 border-radius: $border-radius;
 
                 @include small() {font-size:  $font-size-base;}
-                @include large()  {font-size: $font-size-lg;}
+                @include large() {font-size: $font-size-lg;}
             
                 &:hover {
                     div {
@@ -541,9 +562,6 @@ footer {
         @include large()  {font-size: $font-size-xxl;}
     }
 
-    img {
-        width: 200px;
-    }
 
 
     #mapa {
@@ -578,6 +596,7 @@ footer {
                 font-weight: 500;
                 font-size: $font-size-xl;
                 margin-bottom: 30px;
+
             }
             
             p {
@@ -587,10 +606,6 @@ footer {
             }
         }
 
-        img {
-            height: 100px;
-            width: auto;
-        }
     }
 
     #servicios-section {
@@ -600,6 +615,12 @@ footer {
         background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
+        @include small() {
+            box-shadow: none;
+            background: none;
+            padding: 50px 0px;
+        }
+        
         .card {
             width: 250px;
             height: 250px;
@@ -609,12 +630,22 @@ footer {
             background-color: white;
             box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
+            @include small() {
+                width: 200px;
+                height: 200px;
+            }
+
             img {
                 width: 150px;
                 height: auto;
+
+                @include small() {
+                    width: 100px;
+                }
             }
 
             span {
+                text-align: center;
                 font-size: $font-size-base;
             }
         }

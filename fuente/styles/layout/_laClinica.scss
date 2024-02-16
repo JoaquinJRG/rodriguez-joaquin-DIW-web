@@ -1,5 +1,6 @@
 
 #encontrarnos {
+
     > section {
         display: flex;
         flex-direction: row;
@@ -7,6 +8,7 @@
 }
 
 #servicios {
+
 
     #servicios-section {
         display: flex;
@@ -28,11 +30,6 @@
     section:first-child {
         display: flex;
         justify-content: space-between;
-
-        img {
-            height: 250px;
-        }
-
     }
 
 }
