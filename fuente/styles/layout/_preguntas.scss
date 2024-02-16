@@ -1,4 +1,11 @@
 #preguntas {
+
+    #preguntas-titulo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     section {
         display: flex;
         flex-direction: column;

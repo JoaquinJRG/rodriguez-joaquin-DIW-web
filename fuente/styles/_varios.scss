@@ -18,6 +18,8 @@ header {
     border: 1px solid $color-secundario;
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px) saturate(180%);
+    width: 100vw;
+    height: 60px;
 
     #logo {
         width: auto;
@@ -125,7 +127,7 @@ header {
         padding: 10px;
 
         img {
-            pointer-events: none;
+            width: 200px;
         }
 
         h1 {
@@ -209,16 +211,22 @@ header {
 
 //Comentarios 
 #comentarios {
-
     margin-top: 100px;
 
-    h2 {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 500;
-        font-size: $font-size-xl;
-        margin-bottom: 10px;
+    #comentarios-titulo {
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+            font-size: $font-size-xl;
+    
+            @include large()  {font-size: $font-size-xxl;}
+        }
 
-        @include large()  {font-size: $font-size-xxl;}
+        img {
+            height: 30px;
+            width: auto;
+            @include large()  {height: 40px;}
+        }
     }
 
     p {
@@ -286,16 +294,25 @@ header {
 #preguntas {
     margin-top: 100px;
 
-    h2 {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 500;
-        font-size: $font-size-xl;
-        margin-bottom: 30px;
+    #preguntas-titulo {
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+            font-size: $font-size-xl;
+    
+            @include large()  {font-size: $font-size-xxl;}
+        }
 
-        @include large()  {font-size: $font-size-xxl;}
+        img {
+            height: 30px;
+            width: auto;
+
+            @include large()  {height: 40px;}
+        }
     }
 
     section {
+        margin-top: 30px;
         padding: 30px;
         border-radius: $border-radius;
         background-color: $color-secundario;
@@ -501,11 +518,15 @@ footer {
 #equipo {
     padding-top: 80px;
 
-    h1 {
+    #equipo-titulo {
+        margin-bottom: 30px;
+    }
+
+
+    h2 {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 500;
         font-size: $font-size-xl;
-        margin-bottom: 30px;
 
         @include large()  {font-size: $font-size-xxl;}
     }
@@ -538,7 +559,8 @@ footer {
                 backdrop-filter: blur(10px) saturate(180%);
                 padding: 15px;
                 border-radius: $border-radius;
-                
+                border: solid 2px $color-destacado;
+
                 p {
                     font-size: $font-size-sm;
                 }
@@ -571,11 +593,15 @@ footer {
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
         width: 100%;
 
+        @include small() {padding: 10px;}
+
         iframe {
             border: none; 
             border-radius: $border-radius;
             height: 350px;
             width: 100%;
+
+            @include large() {height: 500px;}
 
             &:focus {
                 border: none;

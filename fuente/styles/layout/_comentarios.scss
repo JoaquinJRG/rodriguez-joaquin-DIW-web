@@ -7,7 +7,12 @@
 
 
 #comentarios {
-
+    
+    #comentarios-titulo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
     .swiper {
        z-index: 0;

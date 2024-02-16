@@ -1,5 +1,10 @@
 #equipo {
 
+    #equipo-titulo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
     section {
         display: flex;
