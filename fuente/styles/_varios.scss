@@ -41,6 +41,7 @@ header {
             border-radius: $border-radius;
             padding: 8px 12px;
             font-weight: 500;
+            font-size: $font-size-base;
             text-decoration: none;
             color: $color-texto;
             transition: all ease 0.3s;
@@ -58,6 +59,7 @@ header {
         border-radius: $border-radius;
         padding: 10px;
         font-weight: 500;
+        font-size: $font-size-base;
         text-decoration: none;
         background: linear-gradient(90deg, $color-destacado 30%, $color-fondo2 100%);
         color: $color-fondo;
@@ -181,6 +183,7 @@ header {
             border-radius: $border-radius;
             padding: 10px;
             font-weight: 500;
+            font-size: $font-size-base;
             text-decoration: none;
             background-color: $color-fondo;
             color: $color-destacado;
@@ -439,8 +442,9 @@ footer {
         padding: 30px;
         border-radius: $border-radius;
         background-color: $color-secundario;
-
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+
+        @include small() {padding: 20px;}
 
         input {
             border: solid 2px transparent;
@@ -543,6 +547,15 @@ footer {
         border-radius: $border-radius;
         background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+
+        @include medium() {
+            padding: 20px 0px;
+        }
+
+        @include small() {
+            box-shadow: none;
+            background: none;
+        }
 
         .card {
             border-radius: $border-radius;
