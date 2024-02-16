@@ -151,6 +151,14 @@ header {
         font-size: $font-size-base;
 
         @include large()  {font-size: $font-size-md;}
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            margin-bottom: 3px;
+        }
     }
 
     #inicio-datos {
