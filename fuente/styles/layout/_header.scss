@@ -20,7 +20,7 @@ header {
         display: none;
     }
 
-    @include medium(){
+    @include medium() {
 
         #pedir-cita-btn {
             display: none;
@@ -37,19 +37,18 @@ header {
     display: none;
 
     @include medium() {
-            nav {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-            }
-    
-            &.open {
-                position: fixed;
-                z-index: 1;
-                display: block;
-            }
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &.open {
+            position: fixed;
+            z-index: 1;
+            display: block;
+        }
     }
 }
-

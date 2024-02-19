@@ -1,7 +1,7 @@
-*{
+* {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    scrollbar-color: $color-destacado $color-secundario;
+    scrollbar-color: $color-fondo3 transparent;
     scrollbar-width: thin;
 }
 
@@ -87,7 +87,7 @@ header {
 }
 
 #menu-section {
-    
+
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px) saturate(180%);
 
@@ -129,17 +129,20 @@ header {
         padding: 10px;
 
         img {
-            width: 200px;
+            width: 150px;
+
+            @include large() {
+                width: 250px;
+            }
         }
 
         h1 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: $font-size-xxl;
+            font-size: $font-size-xxxl;
+            text-align: center;
             background: linear-gradient(90deg, $color-destacado, $color-fondo2);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            
-            @include large()  {font-size: $font-size-xxxl;}
         }
     }
 
@@ -150,25 +153,30 @@ header {
         background-color: $color-secundario;
         font-size: $font-size-base;
 
-        @include large()  {font-size: $font-size-md;}
+        @include large() {
+            font-size: $font-size-md;
+        }
 
         h4 {
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
 
         h5 {
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
     }
 
     #inicio-datos {
         padding: 10px;
+        padding-left: 40px;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
         border-radius: $border-radius;
         background-color: $color-secundario;
         font-size: $font-size-sm;
 
-        @include large()  {font-size: $font-size-md;}
+        @include large() {
+            font-size: $font-size-md;
+        }
 
     }
 
@@ -183,7 +191,9 @@ header {
         p {
             font-size: $font-size-md;
 
-            @include large()  {font-size: $font-size-lg;}
+            @include large() {
+                font-size: $font-size-lg;
+            }
         }
 
         a {
@@ -229,29 +239,37 @@ header {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 500;
             font-size: $font-size-xl;
-    
-            @include large()  {font-size: $font-size-xxl;}
+
+            @include large() {
+                font-size: $font-size-xxl;
+            }
         }
 
         img {
             height: 30px;
             width: auto;
-            @include large()  {height: 40px;}
+
+            @include large() {
+                height: 40px;
+            }
         }
     }
 
     p {
-        font-size: $font-size-base;
+        font-size: $font-size-md;
         margin-bottom: 30px;
 
-        @include large()  {font-size: $font-size-md;}
+        @include large() {
+            font-size: $font-size-lg;
+        }
     }
+
 
     .swiper {
         padding: 10px;
         border-radius: 15px;
         background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
-        box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.38);
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
         .swiper-slide {
             width: 100px;
@@ -260,7 +278,7 @@ header {
             border-radius: $border-radius;
             margin: 50px 5px;
             padding: 20px 30px;
-            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38); 
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
             img {
                 display: block;
@@ -270,7 +288,8 @@ header {
                 object-fit: cover;
                 background-color: $color-destacado;
                 border: solid 3px transparent;
-                @include large()  {
+
+                @include large() {
                     width: 70px;
                     height: 70px;
                 }
@@ -278,25 +297,30 @@ header {
 
             div:first-of-type {
                 margin-bottom: 20px;
+
                 h4 {
                     font-size: $font-size-md;
-                    @include large()  {font-size: $font-size-lg;}
+
+                    @include large() {
+                        font-size: $font-size-lg;
+                    }
                 }
             }
-            
 
-            div:last-of-type p{
+
+            div:last-of-type p {
                 text-wrap: wrap;
                 font-size: $font-size-base;
 
-                
+
 
             }
         }
 
-        .swiper-button-prev, .swiper-button-next {
+        .swiper-button-prev,
+        .swiper-button-next {
             color: $color-destacado;
-        } 
+        }
     }
 }
 
@@ -310,15 +334,19 @@ header {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 500;
             font-size: $font-size-xl;
-    
-            @include large()  {font-size: $font-size-xxl;}
+
+            @include large() {
+                font-size: $font-size-xxl;
+            }
         }
 
         img {
             height: 30px;
             width: auto;
 
-            @include large()  {height: 40px;}
+            @include large() {
+                height: 40px;
+            }
         }
     }
 
@@ -339,7 +367,7 @@ header {
             cursor: pointer;
             border: solid 2px $color-destacado;
             border-radius: $border-radius;
-            box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.38);
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
             &[open] {
                 summary {
@@ -360,14 +388,19 @@ header {
                 padding: 15px;
                 border-radius: $border-radius;
 
-                @include small() {font-size:  $font-size-base;}
-                @include large() {font-size: $font-size-lg;}
-            
+                @include small() {
+                    font-size: $font-size-base;
+                }
+
+                @include large() {
+                    font-size: $font-size-lg;
+                }
+
                 &:hover {
                     div {
                         color: white;
                         background-color: $color-destacado;
-                        box-shadow: 0px 0px 10px 0px rgba(2,79,255,0.75);
+                        box-shadow: 0px 0px 10px 0px rgba(2, 79, 255, 0.75);
                     }
                 }
 
@@ -393,18 +426,28 @@ header {
                 border-radius: 0px 0px 15px 15px;
                 animation: open 0.6s ease-in-out;
 
-                @include small() {font-size:  $font-size-sm;}
-                @include large()  {font-size: $font-size-md;}
+                @include small() {
+                    font-size: $font-size-sm;
+                }
+
+                @include large() {
+                    font-size: $font-size-md;
+                }
             }
         }
     }
 }
-  
+
 @keyframes open {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
-  
+
 
 //Footer 
 footer {
@@ -444,7 +487,9 @@ footer {
         font-size: $font-size-xl;
         margin-bottom: 30px;
 
-        @include large()  {font-size: $font-size-xxl;}
+        @include large() {
+            font-size: $font-size-xxl;
+        }
     }
 
     form {
@@ -453,7 +498,9 @@ footer {
         background-color: $color-secundario;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
 
-        @include small() {padding: 20px;}
+        @include small() {
+            padding: 20px;
+        }
 
         input {
             border: solid 2px transparent;
@@ -463,7 +510,7 @@ footer {
             transition: all ease 0.3s;
 
             &:focus {
-                box-shadow: 0px 0px 10px 0px rgba(2,79,255,0.75);
+                box-shadow: 0px 0px 10px 0px rgba(2, 79, 255, 0.75);
                 border: solid 2px $color-destacado;
             }
         }
@@ -478,7 +525,7 @@ footer {
             transition: all ease 0.3s;
 
             &:focus {
-                box-shadow: 0px 0px 10px 0px rgba(2,79,255,0.75);
+                box-shadow: 0px 0px 10px 0px rgba(2, 79, 255, 0.75);
                 border: solid 2px $color-destacado;
             }
 
@@ -503,7 +550,7 @@ footer {
             transition: all ease 0.3s;
 
             &:hover {
-                box-shadow: 0px 0px 10px 0px rgba(2,79,255,0.75);
+                box-shadow: 0px 0px 10px 0px rgba(2, 79, 255, 0.75);
             }
         }
     }
@@ -533,21 +580,38 @@ footer {
 
     #equipo-titulo {
         margin-bottom: 30px;
-    }
 
+        h2 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+            font-size: $font-size-xl;
+    
+            @include large() {
+                font-size: $font-size-xxl;
+            }
 
-    h2 {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 500;
-        font-size: $font-size-xl;
-
-        @include large()  {font-size: $font-size-xxl;}
+            img {
+                height: 30px;
+                width: auto;
+    
+                @include large() {
+                    height: 40px;
+                }
+            }
+        }
     }
 
     p {
-        font-size: $font-size-base;
+        font-size: $font-size-md;
         text-wrap: balance;
         margin-bottom: 5px;
+    }
+
+    h3 {
+        font-size: $font-size-md;
+        
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
     section {
@@ -597,33 +661,50 @@ footer {
 #encontrarnos {
     padding-top: 80px;
 
-    h1 {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-weight: 500;
-        font-size: $font-size-xl;
-        margin-bottom: 30px;
+    #encontrarnos-titulo {
 
-        @include large()  {font-size: $font-size-xxl;}
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+            font-size: $font-size-xl;
+
+            @include large() {
+                font-size: $font-size-xxl;
+            }
+        }
+
+        img {
+            height: 30px;
+            width: auto;
+
+            @include large() {
+                height: 40px;
+            }
+        }
+
     }
 
-
-
     #mapa {
-        background-color: $color-secundario;
+        margin-top: 30px;
         padding: 30px;
+        background-color: $color-secundario;
         border-radius: $border-radius;
         box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
         width: 100%;
 
-        @include small() {padding: 10px;}
+        @include small() {
+            padding: 10px;
+        }
 
         iframe {
-            border: none; 
+            border: none;
             border-radius: $border-radius;
             height: 350px;
             width: 100%;
 
-            @include large() {height: 500px;}
+            @include large() {
+                height: 500px;
+            }
 
             &:focus {
                 border: none;
@@ -637,24 +718,38 @@ footer {
 #servicios {
     padding-top: 80px;
 
-    section {
-        div {
-            h1 {
-                font-family: 'Barlow Condensed', sans-serif;
-                font-weight: 500;
-                font-size: $font-size-xl;
-                margin-bottom: 30px;
+    #servicios-titulo {
 
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 500;
+            font-size: $font-size-xl;
+
+            @include large() {
+                font-size: $font-size-xxl;
             }
-            
-            p {
-                font-size: $font-size-md;
-                text-wrap: balance;
-                margin-bottom: 5px;
+        }
+
+        img {
+            height: 30px;
+            width: auto;
+
+            @include large() {
+                height: 40px;
             }
         }
 
     }
+
+
+    p {
+        font-size: $font-size-md;
+        text-wrap: wrap;
+        margin-bottom: 5px;
+    }
+
+
+
 
     #servicios-section {
         padding: 50px 30px;
@@ -668,7 +763,7 @@ footer {
             background: none;
             padding: 50px 0px;
         }
-        
+
         .card {
             width: 250px;
             height: 250px;
@@ -699,4 +794,3 @@ footer {
         }
     }
 }
-

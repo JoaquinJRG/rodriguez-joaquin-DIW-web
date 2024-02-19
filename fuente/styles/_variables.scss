@@ -1,8 +1,16 @@
 //Paleta colores 
-$paleta: (#FFFFFF, #ECE9EA, #0E235D, #024fff, #47A9FF, #AEDBFF, #D6EBFF);
+$paleta: (
+    #FFFFFF,
+    #ECE9EA,
+    #0E235D,
+    #024fff,
+    #47A9FF,
+    #AEDBFF,
+    #D6EBFF
+);
 
 $color-fondo: nth($paleta, 1);
-$color-secundario: nth($paleta, 2); 
+$color-secundario: nth($paleta, 2);
 $color-texto: nth($paleta, 3);
 $color-destacado: nth($paleta, 4);
 $color-fondo2: nth($paleta, 5);
@@ -30,6 +38,4 @@ $font-size-xxl: clamp(2.44rem, 0.8vw + 2.24rem, 3.75rem);
 $font-size-xxxl: clamp(3.05rem, 1.2vw + 2.75rem, 5rem);
 
 //Border-radius
-$border-radius: 15px; 
-
-
+$border-radius: 15px;

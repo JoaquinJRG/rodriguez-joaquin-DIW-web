@@ -1,7 +1,12 @@
-
 #encontrarnos {
 
-    > section {
+    #encontrarnos-titulo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    >section {
         display: flex;
         flex-direction: row;
     }
@@ -9,6 +14,11 @@
 
 #servicios {
 
+    #servicios-titulo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
     #servicios-section {
         display: flex;
@@ -33,5 +43,3 @@
     }
 
 }
-
-
