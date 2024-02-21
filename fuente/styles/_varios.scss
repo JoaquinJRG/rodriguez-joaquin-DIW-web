@@ -21,6 +21,8 @@ header {
     width: 100vw;
     height: 60px;
 
+    @include large {height: 85px;}
+
     #logo {
         width: auto;
         height: 100%;
@@ -46,6 +48,8 @@ header {
             color: $color-texto;
             transition: all ease 0.3s;
 
+            @include large {font-size: $font-size-md;}
+
             &:hover {
                 color: $color-destacado;
                 border: solid 1px $color-destacado;
@@ -64,6 +68,8 @@ header {
         background: linear-gradient(90deg, $color-destacado 30%, $color-fondo2 100%);
         color: $color-fondo;
         transition: all ease 0.3s;
+
+        @include large {font-size: $font-size-md;}
 
         &:hover {
             transform: scale(1.1);
@@ -174,6 +180,10 @@ header {
         background-color: $color-secundario;
         font-size: $font-size-sm;
 
+        @include small() {
+            padding-left: 0px;
+        }
+
         @include large() {
             font-size: $font-size-md;
         }
@@ -206,6 +216,8 @@ header {
             background-color: $color-fondo;
             color: $color-destacado;
             transition: all ease 0.3s;
+
+            @include large {font-size: $font-size-md;}
 
             &:hover {
                 transform: scale(1.1);
@@ -374,9 +386,7 @@ header {
                     border-radius: 15px 15px 0px 0px;
 
                     div {
-                        &::before {
-                            content: "-";
-                        }
+                        transform: rotate(45deg);
                     }
                 }
             }
@@ -481,6 +491,24 @@ footer {
 //Pedir Cita
 
 #pedir-cita {
+
+    padding-top: 80px;
+    padding-bottom: 20px;
+    width: 100%;
+
+    @include medium() {
+        padding-right: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    @include small() {padding-top: 10px;}
+
+    section {
+        width: 50%;
+        @include medium() {width: 100%}
+    }
+
     h1 {
         font-family: 'Barlow Condensed', sans-serif;
         font-weight: 500;
@@ -562,12 +590,15 @@ footer {
     section:first-child p {
         font-size: $font-size-md;
         text-wrap: balance;
+        @include small() {display: none;}
     }
 
     #cobayas {
         img {
             width: 350px;
             height: auto;
+
+            @include small() {width: 250px;}
         }
     }
 
@@ -577,6 +608,8 @@ footer {
 
 #equipo {
     padding-top: 80px;
+
+    @include small(){ padding-top: 10px;}
 
     #equipo-titulo {
         margin-bottom: 30px;
@@ -601,17 +634,20 @@ footer {
         }
     }
 
-    p {
+    >p {
         font-size: $font-size-md;
         text-wrap: balance;
         margin-bottom: 5px;
+
+        @include small() {display: none;}
     }
 
     h3 {
         font-size: $font-size-md;
-        
         margin-top: 50px;
         margin-bottom: 20px;
+        @include large(){font-size: $font-size-lg;}
+        @include small() {text-align: center;}
     }
 
     section {
@@ -649,6 +685,7 @@ footer {
 
                 p {
                     font-size: $font-size-sm;
+                    @include large(){font-size: $font-size-base;}
                 }
             }
         }
@@ -660,6 +697,7 @@ footer {
 //La clínica
 #encontrarnos {
     padding-top: 80px;
+
 
     #encontrarnos-titulo {
 
@@ -718,6 +756,8 @@ footer {
 #servicios {
     padding-top: 80px;
 
+    @include small(){ padding-top: 10px;}
+
     #servicios-titulo {
 
         h1 {
@@ -746,6 +786,8 @@ footer {
         font-size: $font-size-md;
         text-wrap: wrap;
         margin-bottom: 5px;
+
+        @include small() {display: none;}
     }
 
 
@@ -761,7 +803,7 @@ footer {
         @include small() {
             box-shadow: none;
             background: none;
-            padding: 50px 0px;
+            padding: 30px 0px;
         }
 
         .card {
@@ -772,25 +814,42 @@ footer {
             padding: 15px;
             background-color: white;
             box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+            cursor: pointer;
+            transition: all ease 0.3s;
 
-            @include small() {
+            @include large() {
+                width: 300px;
+                height: 300px;
+            }
+
+            @include medium() {
                 width: 200px;
                 height: 200px;
+            }
+
+            @include small() {
+                width: 150px;
+                height: 150px;
             }
 
             img {
                 width: 150px;
                 height: auto;
 
-                @include small() {
-                    width: 100px;
-                }
+                @include large() {width: 200px; }
+                @include medium() {width: 100px;}
+                @include small() {width: 50px;}
             }
 
             span {
                 text-align: center;
                 font-size: $font-size-base;
             }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
         }
     }
 }

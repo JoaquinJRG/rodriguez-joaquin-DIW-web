@@ -9,6 +9,10 @@ main {
     padding-top: 100px;
     margin: 0px 120px;
 
+    @include large() {
+        margin: 0px 220px;
+    }
+
     @include medium() {
         margin: 0px 30px;
     }
