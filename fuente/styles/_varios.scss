@@ -362,7 +362,7 @@ header {
         }
     }
 
-    section {
+    article {
         margin-top: 30px;
         padding: 30px;
         border-radius: $border-radius;
@@ -504,7 +504,7 @@ footer {
 
     @include small() {padding-top: 10px;}
 
-    section {
+    article {
         width: 50%;
         @include medium() {width: 100%}
     }
@@ -587,7 +587,7 @@ footer {
         font-size: $font-size-sm;
     }
 
-    section:first-child p {
+    article:first-child p {
         font-size: $font-size-md;
         text-wrap: balance;
         @include small() {display: none;}
@@ -650,7 +650,7 @@ footer {
         @include small() {text-align: center;}
     }
 
-    section {
+    article {
         padding: 30px 20px;
         margin-top: 30px;
         border-radius: $border-radius;
