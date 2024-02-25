@@ -813,6 +813,8 @@ footer {
             border-radius: $border-radius;
             padding: 15px;
             background-color: white;
+            color: $color-texto;
+            text-decoration: none;
             box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
             cursor: pointer;
             transition: all ease 0.3s;
@@ -844,6 +846,7 @@ footer {
             span {
                 text-align: center;
                 font-size: $font-size-base;
+
             }
 
             &:hover {
@@ -852,4 +855,95 @@ footer {
 
         }
     }
+}
+
+//Servicios Completo 
+
+#servicios-completo {
+    gap: 70px;
+
+    section {
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: $border-radius;
+        background: linear-gradient(90deg, $color-fondo3, $color-fondo4);
+        box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+        gap: 20px;
+
+        @include small() {
+            background: none;
+            box-shadow: none;
+        }
+
+        article {
+            padding-right: 60px;
+            width: 70%;
+            gap: 20px;
+
+            @include small() {
+                padding-right: 0;
+                width: 100%;
+            }
+
+            h1 {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-weight: 500;
+                font-size: $font-size-xl;
+    
+                @include large() {
+                    font-size: $font-size-xxl;
+                }
+            }
+
+            p {
+                font-size: $font-size-base;
+                text-wrap: wrap;
+                margin-bottom: 5px;
+                
+                @include large() {
+                    font-size: $font-size-md;
+                }
+            }
+
+        }
+
+        div {
+            width: 250px;
+            height: 250px;
+            border: solid 3px $color-destacado;
+            border-radius: $border-radius;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.38);
+
+            @include large() {
+                width: 300px;
+                height: 300px;
+            }
+
+            @include medium() {
+                width: 200px;
+                height: 200px;
+            }
+
+            @include small() {
+                width: 150px;
+                height: 150px;
+            }
+            img {
+                width: 150px;
+                height: auto;
+
+                @include large() {width: 200px; }
+                @include medium() {width: 100px;}
+                @include small() {width: 50px;}
+            }
+
+            span {
+                text-align: center;
+                font-size: $font-size-base;
+            }
+        }
+    }
+
 }

@@ -1,0 +1,29 @@
+#servicios-completo {
+
+    display: flex;
+    flex-direction: column;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @include small() {
+            flex-direction: column;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
